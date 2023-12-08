@@ -79,4 +79,17 @@ const { title } = Astro.props;
   by growing it to cover the bounds of the element */
   object-fit: cover;
 }
+
+::view-transition-group(overlay) {
+	z-index: 1;
+}
+
+::view-transition-group(wrapper), 
+::view-transition-group(cover-image) {
+	z-index: 2;
+}
+
+::view-transition-group(modal-content) {
+	z-index: 3;
+}
 </style>
